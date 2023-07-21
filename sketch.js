@@ -6,6 +6,7 @@ let fisher;
 let cafe;
 let folx;
 let postcard;
+let silhouette;
 let EL1;
 let dad1;
 let EL2;
@@ -25,6 +26,7 @@ function preload(){
   EL2 = loadImage('assets/ELDad_PatriaOMuerte_EL2.png');
   dad2 = loadImage('assets/ELDad_PatriaOMuerte_dad2.png');
   postcard = loadImage('assets/ELDad_PatriaOMuerte_postcard.png');
+  silhouette = loadImage('assets/ELDad_PatriaOMuerte_silhouette.png')
 
   for (let i = 0; i < 16; i++){
     squares[i] = loadImage("assets/grid_" + i + ".png");
@@ -103,21 +105,23 @@ function draw() {
   pop();
 
 
-
-   
-  
- 
-
   //postcard
   push();
-  
+  tint(255, alp2);
   postcard.filter(GRAY);
   image(postcard, 0, 0, width, height);
   pop();
 
+  push();
+  tint(255, alp1);
+  silhouette.filter(INVERT);
+  image(silhouette, 0, 0, width, height);
+  pop();
+
+
+
   if (frameCount%int(random(20))==0){
-    postcard.filter(INVERT);
-    
+   
     if (alp1 <= 0){
       alp1 = 100;
       alp2 = 0;
