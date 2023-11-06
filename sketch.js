@@ -48,8 +48,8 @@ function draw() {
   image(base, 0, 0, width, height);
   pop();
   
-    // fisher
-    blend(fisher, 0, 0, fisher.width, fisher.height, 0, 0, width, height, DARKEST);
+  // fisher
+  blend(fisher, 0, 0, fisher.width, fisher.height, 0, 0, width, height, DARKEST);
 
   //cafe
   blend(cafe, 0, 0, cafe.width, cafe.height, 0, 0, width, height, LIGHTEST);
